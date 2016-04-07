@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<script src="angular.js"></script>
+		<script src="myApp.js"></script>
+	</head>
+	<body ng-app="app">
+		<h1 ng-controller="helloCtrl">
+			message: {{message}} <br/>
+		</h1>
+		<div ng-controller="weatherCtrl">
+			description: {{weather.description}} <br/>
+			temperature: {{weather.temperature}} <br/>
+		</div>
+	</body>
+</html>

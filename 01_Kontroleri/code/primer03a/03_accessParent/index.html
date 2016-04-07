@@ -1,0 +1,23 @@
+<html ng-app="myFirstModule">
+  <head>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="ParentController.js"></script>
+    <script src="ChildController.js"></script>
+  </head>
+  <body>
+
+    <div ng-controller="ParentController">
+      <h1> {{message}}</h1>
+      <p>{{text}}</p>
+
+      <div ng-controller="ChildController">
+        <h1> {{message}}</h1>
+        <h1> {{$parent.message}}</h1> <!-- pristup message atributu parent scopea --> 
+        <!-- ng-model: u $scope.$parent.text se smešta korisnički unos sa input-a -> kako korisnik kuca menja se text property na ParentController-u -->
+        <input type="text" ng-model="$parent.text"/>
+      </div>
+    </div>
+
+  </body>
+</html>
