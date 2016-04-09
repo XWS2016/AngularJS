@@ -1,0 +1,22 @@
+<h2>{{ctrl.title}}</h2>
+<div ng-repeat="blogEntry in ctrl.entries | orderBy:order">
+  <div>
+    {{ blogEntry.title }}
+  </div>
+  <div>
+    {{ blogEntry.entry }}
+  </div>
+  <div ng-show="blogEntry.comments.length">
+    komentari ({{blogEntry.comments.length}}):
+    <div ng-repeat="comment in blogEntry.comments">
+      <br/>
+      <div>
+        author:{{comment.signedBy}}
+      </div>
+      <div>
+        {{comment.text}}
+      </div>
+    </div>
+  </div>
+  <hr/>
+</div>
