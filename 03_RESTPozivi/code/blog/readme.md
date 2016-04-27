@@ -1,4 +1,4 @@
-# REST servisi za blogEntries i comments + AngularJS klijent (Direktive)
+# REST servisi za blogEntries i comments + AngularJS klijent (REST pozivi)
 
 Aplikacija je jednostavan REST back end i AngularJS klijent blog
 
