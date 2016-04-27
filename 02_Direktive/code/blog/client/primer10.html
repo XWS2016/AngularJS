@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script src="angular.js"></script>
+    <script src="primer10.js"></script>
+  </head>
+  <body ng-app="app">
+    <h1>
+      Blog entries
+    </h1>
+    <div ng-controller="blogEntriesCtrl">
+      <form ng-submit="search()">
+        <div>
+          title:<input type="text" ng-model="searchEntry.title"/>
+        </div>
+        <div>
+          <input type="button" value="search">
+        </div>
+      </form>
+      <div>
+        sort by:
+        <select ng-model="sortOrder">
+          <option value="title">title</option>
+          <option value="-comments.length">comments</option>
+        </select>
+      </div>
+      <br/>
+      <xws-entries blog-entries="blogEntries" sort-order="sortOrder"></xws-entries>
+    </div>
+  </body>
+</html>

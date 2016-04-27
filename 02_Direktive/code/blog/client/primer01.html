@@ -1,12 +1,19 @@
 <html>
 	<head>
 		<script src="angular.js"></script>
-		<script src="myApp.js"></script>
+		<script src="primer01.js"></script>
 	</head>
 	<body ng-app="app">
 		<h1> Blog entries
 		</h1>
 		<div ng-controller="blogEntriesCtrl">
+			<div>
+				title:<input type="text" ng-model="searchEntry.title"/>
+			</div>
+			<div>
+				input title:{{searchEntry.title}}
+			</div>
+			<br/>
 			<div ng-repeat="blogEntry in blogEntries">
 				<div>
 					{{ blogEntry.title }}
@@ -14,7 +21,6 @@
 				<div>
 					{{ blogEntry.entry }}
 				</div>
-				<hr/>
 			</div>
 		</div>
 	</body>
