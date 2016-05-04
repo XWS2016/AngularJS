@@ -7,7 +7,7 @@ var BlogEntry = require(__dirname + '/app/model/blogEntry');
 var Comment = require(__dirname + '/app/model/comment');
 
 
-mongoose.connect('mongodb://localhost/blogApp');
+mongoose.connect('mongodb://127.0.0.1/blogApp');
 
 
 // konfigurisemo bodyParser()

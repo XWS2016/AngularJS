@@ -1,0 +1,13 @@
+{
+  "name": "blog",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "angular-resource": "^1.5.5",
+    "angular-ui-router": "^0.2.18",
+    "angular-component-router": "^0.2.1"
+  },
+  "devDependencies": {},
+  "appPath": "client"
+}

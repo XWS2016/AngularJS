@@ -33,7 +33,11 @@ blogEntryRouter
     });
   })
   .get('/', function(req, res) {
-    BlogEntry.find({}, function(err, data, next) {
+    var entry={};
+    if (req.query.title) {
+      entry={title: new RegExp(req.query.title, "i")};
+    }
+    BlogEntry.find(entry).populate('comments').exec(function(err, data, next) {
       res.json(data);
     });
   })
@@ -100,6 +104,8 @@ app.use('/api/blogEntries', blogEntryRouter);
 app.use('/api/comments', commentRouter);
 //klijentsku angular aplikaciju serviramo iz direktorijuma client
 app.use('/blog', express.static(__dirname + '/client'));
+//klijentsku angular aplikaciju serviramo iz direktorijuma client
+app.use('/bower_components', express.static(__dirname + '/bower_components'));
 
 
 //na kraju dodajemo middleware za obradu gresaka

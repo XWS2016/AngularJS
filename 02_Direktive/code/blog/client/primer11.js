@@ -22,7 +22,7 @@
   var entriesComponent = {
     bindings: { //vezivanje za kontroler,
       entries: "<blogEntries", // blogEntries se mapira na blog-entries,
-      order: "<sortOrder" // scopeOrder se mapira na scope-order,
+      order: "<sortOrder" // sortOrder se mapira na sort-order,
     },
     templateUrl: "primer11-entries.html",
     controller: entriesComponentCtrl,

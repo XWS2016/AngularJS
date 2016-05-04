@@ -1,0 +1,12 @@
+<div>
+  <h1>{{entriesCtrl.proba}}</h1>
+  <form ng-submit="entriesCtrl.search()">
+    <div>
+      title:<input type="text" ng-model="entriesCtrl.searchEntry.title"/>
+    </div>
+    <div>
+      <input type="submit" value="search"/>
+    </div>
+  </form>
+  <blog-entries-list-component blog-entries="entriesCtrl.blogEntries" details="entriesCtrl.details"></blog-entries-list-component>
+</div>

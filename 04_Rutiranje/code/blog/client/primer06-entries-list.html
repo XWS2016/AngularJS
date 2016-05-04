@@ -1,0 +1,9 @@
+<div ng-repeat="blogEntry in blogEntriesListCtrl.blogEntries">
+	<div>
+	  {{ blogEntry.title }}
+	</div>
+	<div>
+	  {{ blogEntry.entry }}
+	</div>
+	<div><button ng-click="blogEntriesListCtrl.details(blogEntry)">details</button></div>
+</div>

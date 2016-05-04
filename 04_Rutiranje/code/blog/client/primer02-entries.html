@@ -1,0 +1,20 @@
+<div>
+  <form ng-submit="search()">
+    <div>
+      title:<input type="text" ng-model="searchEntry.title"/>
+    </div>
+    <div>
+      <input type="button" value="search" ng-click="search()">
+    </div>
+  </form>
+  <br/>
+  <div ng-repeat="blogEntry in blogEntries">
+    <div>
+      {{ blogEntry.title }}
+    </div>
+    <div>
+      {{ blogEntry.entry }}
+    </div>
+    <div><button ng-click="details(blogEntry)">details</button></div>
+  </div>
+</div>

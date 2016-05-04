@@ -1,0 +1,15 @@
+<div>
+	<h2>entry:</h2>
+	<div>{{blogEntryCtrl.blogEntry.title}}</div>
+	<div>{{blogEntryCtrl.blogEntry.createdAt | date:'dd.MM.yyyy. HH:mm:ss'}}</div>
+	<div>{{blogEntryCtrl.blogEntry.updatedAt | date:'dd.MM.yyyy. HH:mm:ss'}}</div>
+	<div>{{blogEntryCtrl.blogEntry.entry}}</div>
+</div>
+<div ng-if="blogEntryCtrl.blogEntry.comments && blogEntryCtrl.blogEntry.comments.length>0">
+	<h2>comments:</h2>
+	<ul>
+		<li ng-repeat="comment in blogEntryCtrl.blogEntry.comments">
+			<blog-comment-component comment="comment"></blog-comment-component>
+		</li>
+	</ul>
+</div>

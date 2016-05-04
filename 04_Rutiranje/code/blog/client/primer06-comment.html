@@ -1,0 +1,6 @@
+{{blogCommponentCtrl.comment.text}}
+<ul ng-if="blogCommponentCtrl.comment.comments">
+	<li ng-repeat="comment in blogCommponentCtrl.comment.comments">
+		<blog-comment-component comment="comment"></blog-comment-component>
+	</li>
+</ul>

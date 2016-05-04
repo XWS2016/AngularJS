@@ -7,7 +7,7 @@ var BlogEntry = require(__dirname + '/app/model/blogEntry');
 var Comment = require(__dirname + '/app/model/comment');
 
 
-mongoose.connect('mongodb://localhost/blogApp');
+mongoose.connect('mongodb://127.0.0.1/blogApp');
 
 
 // konfigurisemo bodyParser()
@@ -36,9 +36,6 @@ blogEntryRouter
     var entry={};
     if (req.query.title) {
       entry={title: new RegExp(req.query.title, "i")};
-    }
-    if (req.query.entry){
-      entry={entry: new RegExp(req.query.entry,'i')};
     }
     BlogEntry.find(entry).populate('comments').exec(function(err, data, next) {
       res.json(data);
