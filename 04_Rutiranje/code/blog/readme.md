@@ -1,4 +1,4 @@
-# REST servisi za blogEntries i comments + AngularJS klijent (Direktive)
+# REST servisi za blogEntries i comments + AngularJS klijent (Rutiranje)
 
 Aplikacija je jednostavan REST back end i AngularJS klijent blog
 
@@ -23,5 +23,6 @@ U folderu `client` nalazi se Angular klijent
 ## Pokretanje aplikacije
 
 1. pokrenuti `npm install` (pre prvog pokretanja aplikacije)
+1. pokrenuti `bower install` (pre prvog pokretanja aplikacije)
 2. pokrenuti MongoDB: `mongod --dbpath <putanja do db foldera>`
 3. pokretati primere pomoću `node app.js`
