@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script src="../lib/angular/angular.js"></script>
+		<script src="primer01.js"></script>
+	</head>
+	<body ng-app="app">
+		<div ng-controller="timeoutCtrl">
+			<h1>timeout</h1>
+			<button ng-click="startTimeout()">start timeout</button>
+			<button ng-click="cancelTimeout()">cancel timeout</button>
+		</div>
+		<div ng-controller="intervalCtrl">
+			<h1>interval</h1>
+			<button ng-click="startInterval()">start interval</button>
+			<button ng-click="cancelIterval()">cancel interval</button>
+		</div>
+		<div ng-controller="loggerCtrl">
+			<h1>log</h1>
+			<button ng-click="logS()">log</button>
+		</div>
+	</body>
+</html>

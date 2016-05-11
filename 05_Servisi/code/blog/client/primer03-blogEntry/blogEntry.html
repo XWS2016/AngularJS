@@ -1,0 +1,17 @@
+<div>
+	<h2>entry:</h2>
+	<div>{{blogEntry.title}}</div>
+	<div>{{blogEntry.createdAt | date:'dd.MM.yyyy. HH:mm:ss'}}</div>
+	<div>{{blogEntry.updatedAt | date:'dd.MM.yyyy. HH:mm:ss'}}</div>
+	<div>{{blogEntry.entry}}</div>
+</div>
+<div ng-if="blogEntry.comments && blogEntry.comments.length>0">
+	<h2>comments:</h2>
+	<ul>
+		<li ng-repeat="comment in blogEntry.comments"
+			ng-include="'primer03-comments/comment.html'">
+		</li>
+	</ul>
+</div>
+<div ng-include="'primer03-comments/commentForm.html'">
+</div>

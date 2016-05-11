@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<script src="../lib/angular/angular.js"></script>
+		<script src="primer02-values.js"></script>
+		<script src="primer02-factories.js"></script>
+		<script src="primer02-services.js"></script>
+		<script src="primer02-providers.js"></script>
+		<script src="primer02-constants.js"></script>
+		<script src="primer02.js"></script>
+	</head>
+	<body ng-app="app">
+		<div ng-controller="valuesCtrl">
+			<h1>values</h1>
+			<button ng-click="showUser()">show default user</button>
+		</div>
+		<div ng-controller="factoriesCtrl">
+			<h1>factories</h1>
+			<button ng-click="showUser()">show default user from factory</button>
+			<button ng-click="showNewPerson()">show new Person</button>
+		</div>
+		<div ng-controller="servicesCtrl">
+			<h1>services</h1>
+			<button ng-click="showNewPerson()">show new Person</button>
+		</div>
+		<div ng-controller="providersCtrl">
+			<h1>services</h1>
+			<button ng-click="sayHello()">hello</button>
+		</div>
+	</body>
+</html>

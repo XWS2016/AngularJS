@@ -1,0 +1,6 @@
+{{comment.text}}
+<ul ng-if="comment.comments">
+	<li ng-repeat="comment in comment.comments"
+		ng-include="'primer03-comments/comment.html'">
+	</li>
+</ul>
