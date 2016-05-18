@@ -33,7 +33,7 @@
 
 	var loggerController = function ($scope, $log) {
 		$scope.logS = function () {
-			$log.info('$log services');
+			$log.info('$log service');
 		}
 	}
 

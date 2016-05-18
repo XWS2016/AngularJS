@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<script src="../lib/angular/angular.js"></script>
+		<script src="../lib/angular-resource/angular-resource.js"></script>
+	    <script src="../lib/angular-ui-router/release/angular-ui-router.js"></script>
+	    <script src="../lib/ngstorage/ngStorage.js"></script>
+	    <script src="../lib/angular-jwt/dist/angular-jwt.js"></script>
+		<script src="blogEntry/blogEntryResource.js"></script>
+		<script src="blogEntry/blogEntry.js"></script>
+		<script src="comments/commentResource.js"></script>
+		<script src="comments/comment.js"></script>
+		<script src="utils/authentication.js"></script>
+		<script src="users/login.js"></script>
+		<script src="index.js"></script>
+	</head>
+	<body ng-app="app">
+		<button ng-if="isLoggedIn()" ng-click="logout()">log out</button>
+		<a ng-if="!isLoggedIn()&&getCurrentState()!=='login'" ui-sref="login"><button>log in</button></a>
+		<div ui-view></div>
+	</body>
+</html>
