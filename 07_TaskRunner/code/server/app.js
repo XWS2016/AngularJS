@@ -199,7 +199,7 @@ app.use('/api/blogEntries', blogEntryRouter);
 app.use('/api/comments', commentRouter);
 //klijentsku angular aplikaciju serviramo iz direktorijuma client
 app.use('/blog', express.static(__dirname + '/client'));
-app.use('/lib', express.static(__dirname + '/bower_components'));
+app.use('/bower_components', express.static(__dirname + '/bower_components'));
 
 
 //na kraju dodajemo middleware za obradu gresaka

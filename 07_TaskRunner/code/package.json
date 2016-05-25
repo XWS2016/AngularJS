@@ -1,0 +1,22 @@
+{
+  "name": "NewsBackend",
+  "version": "0.1.1",
+  "description": "Primer REST back end aplikacije. Node, Express, MongoDB, Mongoose.",
+  "author": "Milan Segedinac <milan.segedinac@gmail.com>",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-bower": "^0.21.2",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-html2js": "^0.3.6",
+    "grunt-injector": "^1.0.1",
+    "grunt-ng-annotate": "^2.0.2",
+    "grunt-nodemon": "^0.4.2",
+    "grunt-wiredep": "^3.0.1"
+  },
+  "license": "MIT"
+}

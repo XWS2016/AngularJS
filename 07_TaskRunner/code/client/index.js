@@ -1,5 +1,7 @@
 (function (angular) {
-	var app = angular.module('app',['blogEntry','comment','login','ui.router', 'authentication']);
+   config.$inject = ["$stateProvider", "$urlRouterProvider"];
+    run.$inject = ["$rootScope", "$http", "$location", "$localStorage", "AuthenticationService", "$state"];
+	var app = angular.module('app',['blogEntry','comment','login','ui.router', 'authentication', 'ui.bootstrap','templates-main']);
 	app
     .config(config)
     .run(run);
@@ -40,7 +42,7 @@
 
         $rootScope.logout = function () {
             AuthenticationService.logout();
-        }
+        };
         
         $rootScope.getCurrentUserRole = function () {
             if (!AuthenticationService.getCurrentUser()){
@@ -49,7 +51,7 @@
             else{
               return AuthenticationService.getCurrentUser().role;
             }
-        }
+        };
         $rootScope.isLoggedIn = function () {
             if (AuthenticationService.getCurrentUser()){
               return true;
@@ -57,10 +59,10 @@
             else{
               return false;
             }
-        }
+        };
         $rootScope.getCurrentState = function () {
           return $state.current.name;
-        }
+        };
     }
 
 }(angular));

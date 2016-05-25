@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<!-- bower:css -->
+		<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+		<!-- endbower -->
+		<!-- injector:css -->
+  		<!-- endinjector -->
+	</head>
+	<body>
+    	<!-- bower:js -->
+    	<!-- endbower -->
+		<!-- injector:js -->
+		<!-- endinjector -->
+		<div ng-app="app">
+		<button ng-if="isLoggedIn()" ng-click="logout()">log out</button>
+		<a ng-if="!isLoggedIn()&&getCurrentState()!=='login'" ui-sref="login"><button>log in</button></a>
+		<div ui-view></div>
+		</div>
+	</body>
+</html>

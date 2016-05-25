@@ -1,0 +1,35 @@
+<div ng-controller="blogEntriesCtrl">
+	<h1>Entries</h1>
+	<ul class="list-group">
+	<li class="list-group-item" ng-repeat="blogEntry in blogEntries">
+		<div>
+			{{ blogEntry.title }}
+		</div>
+		<div>
+			{{ blogEntry.entry }}
+		</div>
+		<div>
+			<button ng-if="getCurrentUserRole()&&getCurrentUserRole()=='admin'" ng-click="delete(blogEntry)">delete</button>
+			<button ng-if="getCurrentUserRole()&&getCurrentUserRole()=='admin'" ng-click="edit(blogEntry)">edit</button>
+			<button ng-click="details(blogEntry)">details</button>
+		</div>
+	</li>
+	</ul>
+	<div  ng-if="isLoggedIn()">
+	<hr/>
+	<h2>New entry</h2>
+	<table>
+		<tr>
+			<td>title:</td>
+			<td><input type="text" ng-model="blogEntry.title"></td>
+		</tr>
+		<tr>
+			<td>entry:</td>
+			<td><textarea rows="4" cols="50" ng-model="blogEntry.entry"></textarea></td>
+		</tr>
+		<tr>
+			<td colspan="2" aling="center"><button ng-click="save()">submit</button></td>
+		</tr>
+	</table>
+	</div>
+</div>

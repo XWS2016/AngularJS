@@ -1,4 +1,5 @@
 (function () {
+    Service.$inject = ["$http", "$localStorage", "$log", "$state", "jwtHelper"];
     angular
         .module('authentication',['ngStorage', 'ui.router', 'angular-jwt'])
         .factory('AuthenticationService', Service);
@@ -18,7 +19,7 @@
                     // ukoliko postoji token, prijava je uspecna
                     if (response.token) {
                         // korisnicko ime, token i rola (ako postoji) cuvaju se u lokalnom skladištu
-                        var currentUser = { username: username, token: response.token }
+                        var currentUser = { username: username, token: response.token };
                         var tokenPayload = jwtHelper.decodeToken(response.token);
                         if(tokenPayload.role){
                             currentUser.role = tokenPayload.role;
